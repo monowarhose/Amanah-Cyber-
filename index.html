@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMANAH CYBER | আমানাহ – Your Digital Safety, Our Priority</title>
+<meta name="description" content="AMANAH CYBER | আমানাহ – account protection, privacy and digital safety assistance in Rajshahi, Bangladesh. Order on WhatsApp.">
+<meta property="og:title" content="AMANAH CYBER | আমানাহ">
+<meta property="og:description" content="Your Digital Safety, Our Priority. Account security, privacy and recovery guidance.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{--bg:#050a14;--bg2:#0b1424;--card:#0e1a30;--tx:#e6f1ff;--mut:#8fa6c4;--cy:#22d3ee;--bl:#2563eb;--bd:#1c2e4d;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:radial-gradient(1200px 500px at 70% -10%,#0d2a5a55,transparent),var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI","Noto Sans Bengali",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:var(--cy)}
+.w{max-width:1100px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#050a14ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;gap:14px;height:62px}
+.logo{font-weight:800;letter-spacing:.06em;color:var(--tx);text-decoration:none;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.logo svg{width:26px;height:26px}
+.logo small{color:var(--cy);font-weight:600}
+nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{color:var(--mut);text-decoration:none;padding:6px 10px;border-radius:8px;font-size:14px;white-space:nowrap}
+nav a:hover{color:var(--cy);background:#102040}
+.btn{display:inline-block;border:1px solid var(--cy);color:var(--cy);background:transparent;padding:10px 18px;border-radius:10px;font:600 15px inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{box-shadow:0 0 18px #22d3ee66;transform:translateY(-1px)}
+.btn.p{background:linear-gradient(135deg,var(--bl),#0891b2);border-color:transparent;color:#fff}
+.btn.wa{background:#16a34a;border-color:#16a34a;color:#fff}
+.btn.s{padding:7px 12px;font-size:14px}
+#lang{padding:6px 10px}
+section{padding:56px 0}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.15;margin:.2em 0}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 24px}
+.grad{background:linear-gradient(90deg,#60a5fa,var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{padding:70px 0 50px}
+.hero p{max-width:640px;color:var(--mut)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--bd);border-radius:14px;padding:18px;transition:.25s;display:flex;flex-direction:column;gap:8px}
+.card:hover{border-color:var(--cy);box-shadow:0 0 22px #22d3ee22;transform:translateY(-2px)}
+.tag{font-size:12px;color:var(--cy);background:#0b2a3a;border-radius:99px;padding:2px 10px;align-self:flex-start}
+.price{font-size:24px;font-weight:800}
+.card h3{margin:0;font-size:17px}
+.mut{color:var(--mut);font-size:14px}
+details summary{cursor:pointer;color:var(--cy);font-size:14px}
+details ul{margin:6px 0;padding-left:18px;font-size:14px;color:var(--mut)}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px}
+input,select,textarea{width:100%;background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:11px 12px;font:inherit}
+input:focus,select:focus,textarea:focus,.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+label{font-size:14px;color:var(--mut);display:block;margin:10px 0 4px}
+.err{color:#fda4af;font-size:13px;min-height:1em}
+.feat{border-color:var(--cy);box-shadow:0 0 26px #22d3ee33}
+.tbl{width:100%;border-collapse:collapse}
+.tbl td{padding:10px 8px;border-bottom:1px solid var(--bd)}
+.tbl td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.faq details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+.faq summary{color:var(--tx);font-weight:600}
+.faq p{color:var(--mut);margin:8px 0 0}
+.note{background:#0b2238;border:1px solid #14507a;border-radius:12px;padding:12px 14px;font-size:14px;color:#bfe3ff}
+.ok{background:#052e1a;border-color:#166534;color:#bbf7d0}
+footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:14px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;border-radius:99px;padding:13px 18px;box-shadow:0 6px 24px #0008}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.logo small{display:none}}
+.hg{display:flex;align-items:center;gap:24px;flex-wrap:wrap-reverse;justify-content:space-between}.hc{flex:1 1 420px}.hl{width:min(260px,62vw);height:auto;margin:0 auto;filter:drop-shadow(0 0 30px #22d3ee44)}.logo img{width:46px;height:46px;object-fit:contain}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="#top" aria-label="AMANAH CYBER home"><img src="logo.png" alt="AMANAH CYBER logo" width="46" height="46">AMANAH CYBER <small>| আমানাহ</small></a>
+<nav aria-label="Main">
+<a href="#services" data-t="n_services">Services</a><a href="#pricing" data-t="n_pricing">Pricing</a><a href="#order" data-t="n_order">Order</a><a href="#faq">FAQ</a><a href="#about" data-t="n_about">About</a><a href="#contact" data-t="n_contact">Contact</a>
+</nav>
+<button class="btn s" id="lang" aria-label="Switch language">বাংলা</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="w hg"><div class="hc">
+<span class="tag">AMANAH CYBER | আমানাহ · Rajshahi, Bangladesh</span>
+<h1><span class="grad" data-t="h1">Your Digital Safety, Our Priority</span></h1>
+<p data-t="intro">AMANAH CYBER is a digital safety and cybersecurity assistance brand focused on account protection, privacy awareness, secure account configuration, and authorized account recovery guidance.</p>
+<div class="row">
+<a class="btn p" href="#services" data-t="b_explore">Explore Services</a>
+<a class="btn" href="#pricing" data-t="b_pricing">View Pricing</a>
+<a class="btn wa" data-wa="Assalamu Alaikum, I would like to know more about your services." target="_blank" rel="noopener noreferrer" data-t="b_wa">Contact on WhatsApp</a>
+</div>
+</div><img class="hl" src="logo.png" alt="AMANAH CYBER | আমানাহ logo" width="260" height="260"></div></section>
+
+<section id="services"><div class="w">
+<h2 data-t="n_services">Services</h2><p class="sub" data-t="s_sub">Search and filter every service. Prices are starting prices in BDT; final price is confirmed on WhatsApp.</p>
+<div class="filters">
+<input id="q" type="search" placeholder="Search services…" aria-label="Search services">
+<select id="fp" aria-label="Platform"></select>
+<select id="fc" aria-label="Category"></select>
+<select id="fr" aria-label="Price range"><option value="0">Any price</option><option value="250">Up to ৳250</option><option value="500">Up to ৳500</option><option value="700">Up to ৳700</option></select>
+<select id="fs" aria-label="Sort"><option value="">Sort: default</option><option value="a">Price: low to high</option><option value="d">Price: high to low</option></select>
+</div>
+<h3 id="pophead" style="margin:0 0 12px">Popular services</h3>
+<div class="grid" id="pop"></div>
+<h3 style="margin:28px 0 12px">All services <span class="mut" id="cnt"></span></h3>
+<div class="grid" id="list"></div>
+<p class="note" style="margin-top:18px">We provide guidance and assistance only. We cannot guarantee account recovery or removal of platform restrictions — those decisions belong to the platforms. We do not offer two-factor bypass, biometric workarounds, or follower/like selling.</p>
+</div></section>
+
+<section id="pricing" style="background:var(--bg2)"><div class="w">
+<h2 data-t="n_pricing">Pricing</h2><p class="sub">Six clear packages in BDT. Final scope and price are confirmed on WhatsApp before any work starts. No fake discounts.</p>
+<div class="grid" id="pk"></div>
+<p class="note" style="margin-top:16px">We provide legitimate guidance, appeal preparation and authorized assistance only. We never guarantee that suspended or disabled accounts will be restored or that reports will lead to removal — final decisions are made by the relevant platforms.</p>
+<h3 style="margin:30px 0 8px">Quick comparison</h3>
+<table class="tbl" id="pl"></table>
+<p class="mut" style="margin-top:14px">Need something else? Custom Security Support — contact us for pricing. <a class="btn wa s" data-wa="Assalamu Alaikum, I need Custom Security Support. Please share the details and pricing." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a></p>
+</div></section>
+
+<section><div class="w">
+<h2>Why choose us</h2><p class="sub">Clear, honest, privacy-first support.</p>
+<div class="grid">
+<div class="card"><h3>Honest scope</h3><p class="mut">We tell you up front what we can and cannot do. No guaranteed recoveries.</p></div>
+<div class="card"><h3>Privacy first</h3><p class="mut">We never ask for your passwords, OTPs, recovery codes or session cookies.</p></div>
+<div class="card"><h3>Authorized help only</h3><p class="mut">Only for accounts you own. We never bypass platform security.</p></div>
+<div class="card"><h3>Local support</h3><p class="mut">Based in Rajshahi, Bangladesh, reachable on WhatsApp in Bangla and English.</p></div>
+</div>
+<h3 style="margin:30px 0 8px">Customer reviews</h3>
+<p class="note">Verified customer reviews will appear here. We don’t publish invented testimonials.</p>
+</div></section>
+
+<section><div class="w">
+<h2>How it works</h2><p class="sub">Three simple steps, no account needed.</p>
+<div class="grid">
+<div class="card"><span class="tag">1</span><h3>Choose a service</h3><p class="mut">Search or browse, then tap Order on WhatsApp.</p></div>
+<div class="card"><span class="tag">2</span><h3>Confirm on WhatsApp</h3><p class="mut">We confirm availability, scope and the final price before any work starts.</p></div>
+<div class="card"><span class="tag">3</span><h3>Get guidance</h3><p class="mut">We guide you step by step using each platform’s official tools.</p></div>
+</div></div></section>
+
+<section id="order" style="background:var(--bg2)"><div class="w" style="max-width:720px">
+<h2 data-t="n_order">Place an order</h2><p class="sub">Orders are sent to us through WhatsApp. No account needed.</p>
+<form id="of" novalidate>
+<label for="on">Your name *</label><input id="on" autocomplete="name" maxlength="80"><div class="err" id="e_on"></div>
+<label for="op">Contact number *</label><input id="op" type="tel" autocomplete="tel" maxlength="20" placeholder="01XXXXXXXXX"><div class="err" id="e_op"></div>
+<label for="os">Selected service *</label><select id="os"></select><div class="err" id="e_os"></div>
+<label for="ok">Selected package (optional)</label><select id="ok"></select>
+<label for="od">Short problem description *</label><textarea id="od" rows="3" maxlength="500"></textarea><div class="err" id="e_od"></div>
+<label for="oc">Preferred contact method</label><select id="oc"><option>WhatsApp</option><option>Phone call</option><option>Telegram</option></select>
+<p class="note" id="sum" style="margin-top:14px"></p>
+<p class="note">Never write passwords, OTPs or recovery codes in this form or in chat.</p>
+<div class="row"><button class="btn wa" type="submit">Send order on WhatsApp</button></div>
+</form>
+<div id="done" class="note ok" hidden></div>
+<p class="mut" style="margin-top:12px"><strong>Limitation:</strong> this static site has no database or backend, so orders are <em>not</em> saved on a server. The order exists only as the WhatsApp message you send.</p>
+</div></section>
+
+<section id="faq" class="faq"><div class="w" style="max-width:800px">
+<h2>FAQ</h2><p class="sub"></p>
+<details><summary>How do I order a service?</summary><p>Tap “Order on WhatsApp” on any service, or use the order form. A message with the service and price opens in WhatsApp; we confirm details and final price there.</p></details>
+<details><summary>How does pricing work?</summary><p>Listed prices are starting prices in BDT. Complex cases (several accounts, business assets) may differ; we confirm the final price before any work begins.</p></details>
+<details><summary>How long does a service take?</summary><p>Each service shows an estimate. Actual time depends on your case and on platform response times.</p></details>
+<details><summary>Can you guarantee account recovery?</summary><p>No. Recovery and appeals are decided by the platforms. We only provide authorized guidance and help you prepare accurate requests.</p></details>
+<details><summary>Is my information safe?</summary><p>We collect only what is needed to assist you and never ask for passwords, OTPs, recovery codes or cookies.</p></details>
+<details><summary>What is the refund policy?</summary><p>See the Refund Policy below. Refunds are not available once work has been delivered, but we review each case fairly.</p></details>
+<details><summary>How do I contact support?</summary><p>Message us on WhatsApp using the button on this page.</p></details>
+</div></section>
+
+<section id="about"><div class="w" style="max-width:800px">
+<h2 data-t="n_about">About us</h2>
+<p><strong>AMANAH CYBER | আমানাহ</strong> — Rajshahi, Bangladesh.</p>
+<p class="mut">AMANAH CYBER is a digital safety and cybersecurity assistance brand focused on account protection, privacy awareness, secure account configuration, and authorized account recovery guidance. Our goal is to help people improve their online safety and make informed decisions about digital security.</p>
+</div></section>
+
+<section id="contact" style="background:var(--bg2)"><div class="w" style="max-width:800px">
+<h2 data-t="n_contact">Contact</h2>
+<p id="ci" class="mut"></p>
+<div class="row"><a class="btn wa" data-wa="Assalamu Alaikum, I need support." target="_blank" rel="noopener noreferrer">WhatsApp us</a></div>
+<h3 style="margin-top:28px">Policies</h3>
+<div class="faq">
+<details><summary>Privacy Policy</summary><p>We collect only the details you send us (name, contact number, issue description) to respond to your request. We never request or store passwords, OTPs, recovery codes or session cookies. We do not sell your information. (Editable placeholder text.)</p></details>
+<details><summary>Terms and Conditions</summary><p>Services are guidance and assistance for accounts you own or are authorized to manage. You agree to provide accurate information. Prices are confirmed before work begins. We do not bypass platform security. (Editable placeholder text.)</p></details>
+<details><summary>Refund Policy</summary><p>If we cannot start your service, you receive a full refund of any advance. Once guidance has been delivered, fees are non-refundable; outcomes decided by platforms are not grounds for refund. (Editable placeholder text.)</p></details>
+<details><summary>Service Disclaimer</summary><p>Account recovery, appeals and restriction removal are decided solely by the respective platforms. AMANAH CYBER does not guarantee any outcome and is not affiliated with Meta, Google, Telegram or any other platform.</p></details>
+</div>
+</div></section>
+</main>
+
+<footer><div class="w">© <span id="yr"></span> AMANAH CYBER | আমানাহ · Rajshahi, Bangladesh · Your Digital Safety, Our Priority</div></footer>
+<a class="btn wa fab" data-wa="Assalamu Alaikum, I need support." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>(async()=>{
+// ===== SINGLE CONFIG: edit here =====
+const CONFIG={
+  whatsapp:"8801315223171", // international format, digits only
+  email:"info@example.com", facebook:"https://facebook.com/", hours:"Sat–Thu, 10:00–20:00 (placeholder)"
+};
+// ====================================
+const TYPES={
+chk:{p:300,t:"1–2 days",d:"A guided review of your account’s security and privacy settings.",i:["Settings review","Login activity guidance","Written checklist"]},
+tfa:{p:200,t:"Same day",d:"Step-by-step help turning on two-factor or two-step verification yourself.",i:["Method selection advice","Guided setup","Backup-option tips"]},
+prv:{p:250,t:"Same day",d:"Help configuring privacy settings to limit what others can see.",i:["Audience settings","Profile exposure review","Tips for staying private"]},
+rec:{p:500,t:"2–5 days",d:"Authorized guidance for recovering an account you own, following the platform’s official process.",i:["Case review","Official recovery steps","Help preparing your request"]},
+apl:{p:400,t:"1–3 days",d:"Help writing a clear, accurate appeal to the platform for your own account.",i:["Appeal draft","Evidence checklist","Submission guidance"]},
+con:{p:700,t:"1–2 days",d:"A one-to-one consultation on your digital safety and privacy habits.",i:["Risk discussion","Personalized recommendations","Summary notes"]},
+biz:{p:700,t:"2–3 days",d:"Securing business assets and access roles for accounts you are authorized to manage.",i:["Access roles review","Admin hygiene checklist","Security setup guidance"]},
+log:{p:250,t:"1–2 days",d:"Troubleshooting login and suspicious-activity problems with official tools.",i:["Problem diagnosis","Official fix steps","Prevention tips"]},
+cpr:{p:400,t:"1–3 days",d:"Guidance on responding to a copyright notice or content removal on your own account, using the platform’s official appeal form.",i:["Notice review","Appeal draft help","Submission guidance"]},
+imp:{p:400,t:"1–3 days",d:"Help reporting impersonation or harassment through the platform’s official reporting tools, with a clear evidence checklist.",i:["Case review","Evidence checklist","Official report steps"]},
+ver:{p:300,t:"1–2 days",d:"Guidance on the official Meta Verified subscription: eligibility, requirements and how to apply. Approval is decided by Meta.",i:["Eligibility check","Profile preparation tips","Application guidance"]}
+};
+const CATS={A:"Facebook Security",B:"Instagram Security",C:"Gmail & Google Security",D:"WhatsApp Security",E:"Telegram Security",F:"Other Platforms",G:"Cyber Security & Privacy"};
+const RAW=`A|Facebook|Facebook Account Security Checkup|chk*
+A|Facebook|Two-Factor Authentication Setup Assistance|tfa*
+A|Facebook|Privacy Settings Configuration|prv
+A|Facebook|Hacked Account Recovery Guidance|rec*
+A|Facebook|Disabled Account Appeal Assistance|apl
+A|Facebook|Login Problem Troubleshooting|log
+A|Facebook|Facebook Page Security|chk
+A|Facebook|Business Manager Security|biz
+A|Facebook|Business Asset Access Guidance|biz
+A|Facebook|Copyright Notice Appeal Guidance|cpr
+A|Facebook|Impersonation Report Guidance|imp
+A|Facebook|Harassment Report Guidance|imp
+A|Facebook|Meta Verified Subscription Guidance|ver
+A|Facebook|Identity Confirmation Help|log
+A|Facebook|Password Change Problem Help|log
+B|Instagram|Instagram Account Security Checkup|chk*
+B|Instagram|Two-Factor Authentication|tfa
+B|Instagram|Privacy Settings|prv
+B|Instagram|Hacked Account Recovery Guidance|rec
+B|Instagram|Disabled Account Appeal Assistance|apl
+B|Instagram|Login Problem Assistance|log
+B|Instagram|Copyright Notice Appeal Guidance|cpr
+B|Instagram|Meta Verified Subscription Guidance|ver
+C|Google|Google Account Security Checkup|chk*
+C|Google|Gmail Security Setup|chk
+C|Google|Two-Step Verification|tfa
+C|Google|Recovery Options Configuration|prv
+C|Google|Hacked Gmail Recovery Guidance|rec
+C|Google|Disabled Google Account Appeal Assistance|apl
+C|Google|Suspicious Login Assistance|log
+D|WhatsApp|WhatsApp Two-Step Verification Setup|tfa
+D|WhatsApp|WhatsApp Privacy Settings|prv
+D|WhatsApp|WhatsApp Account Security Guidance|chk
+D|WhatsApp|WhatsApp Hacked Account Recovery Guidance|rec
+D|WhatsApp|WhatsApp Account Protection Consultation|con
+E|Telegram|Telegram Two-Step Verification|tfa
+E|Telegram|Telegram Active Session Review|chk
+E|Telegram|Telegram Privacy Configuration|prv
+E|Telegram|Telegram Account Protection Guidance|chk
+F|Microsoft|Microsoft Account Security|chk
+F|Microsoft|Outlook Email Security|chk
+F|Apple|Apple Account Security Guidance|chk
+F|TikTok|TikTok Account Security|chk
+F|LinkedIn|LinkedIn Account Security|chk
+F|X|X Account Security|chk
+F|Yahoo|Yahoo Mail Security|chk
+G|General|Phishing Awareness|con
+G|General|Online Scam Prevention|con*
+G|General|Digital Privacy Consultation|con*
+G|General|Personal Cybersecurity Assessment|chk
+G|General|Social Engineering Awareness|con
+G|General|Device and Account Security Guidance|chk`;
+let S=RAW.split("\n").map((r,i)=>{const[c,pl,n,t]=r.split("|");const k=t.replace("*","");return{id:i,cat:CATS[c],pl,n,pop:t.endsWith("*"),...TYPES[k],price:TYPES[k].p}});
+// Edit package names, prices, features here (one place):
+const PK=[
+{n:"Basic Security",p:499,w:"Everyday account protection",i:["One account security checkup","Login security review","Privacy settings assistance","Two-factor authentication guidance","Basic security consultation"]},
+{n:"Account Recovery",p:1000,w:"Login problems or a compromised account",i:["Initial account recovery case assessment","Login problem analysis","Recovery options review","Official recovery procedure guidance","Next-step recommendations"]},
+{n:"Suspended Account",p:5000,f:1,w:"Restricted or suspended accounts",i:["Account restriction assessment","Review of the available official appeal process","Appeal documentation assistance","Official appeal submission guidance","Follow-up guidance where applicable"],x:"Restoration is not guaranteed. The platform makes the final decision."},
+{n:"Disabled Account",p:6000,f:1,w:"Disabled accounts that need an appeal",i:["Disabled account case review","Recovery options assessment","Appeal preparation assistance","Supporting information checklist","Official recovery procedure guidance"],x:"Restoration is not guaranteed. The platform makes the final decision."},
+{n:"Fake Account & Impersonation",p:8000,w:"Legitimate impersonation and identity-abuse reports",i:["Impersonation case assessment","Evidence collection checklist","Official reporting guidance","Complaint preparation assistance","Evidence preservation guidance"],x:"Exclusively for legitimate impersonation reporting and identity-abuse complaints. A report does not always result in account removal; the platform decides."},
+{n:"Business Security",p:1500,w:"Facebook Pages and Business Manager",i:["Facebook Page security review","Business Manager security assessment","Admin access review","Two-factor authentication guidance","Business asset protection checklist"]}];
+const PL=[["Account Security Checkup",300],["Two-Factor Authentication Assistance",200],["Privacy Settings Assistance",250],["Account Recovery Guidance",500],["Appeal Draft Assistance",400],["Digital Privacy Consultation",700],["Business Manager Security Assistance",700],["Custom Security Support","Contact for pricing"]];
+
+// ---- Optional Supabase data (used only when config.js is filled in and reachable) ----
+if(window.AC&&AC.url&&AC.key&&window.supabase){try{
+const sb=supabase.createClient(AC.url,AC.key);
+const[a,b,c]=await Promise.all([sb.from("site_settings").select("key,value"),sb.from("packages").select("*").eq("is_active",true).order("name"),sb.from("services").select("*").eq("active",true).order("sort")]);
+if(!a.error&&!b.error&&!c.error){window.sb=sb;
+const m=Object.fromEntries(a.data.map(r=>[r.key,r.value]));
+for(const k of["whatsapp","email","facebook","hours"])if(m[k])CONFIG[k]=m[k];
+if(m.hero_title)document.querySelector('[data-t="h1"]').textContent=m.hero_title;
+if(m.intro)document.querySelector('[data-t="intro"]').textContent=m.intro;
+if(b.data.length){PK.length=0;b.data.forEach(r=>PK.push({n:r.name,p:r.price,f:false,w:r.description||"Package details",i:r.features||[],x:"Final scope and availability are confirmed on WhatsApp."}))}
+if(c.data.length)S=c.data.map((r,i)=>({id:i,cat:r.category,pl:r.platform,n:r.name,pop:r.featured,d:r.description,i:r.includes||[],t:r.est_time,price:r.price}));
+const lim=document.querySelector("#order p.mut");if(lim)lim.textContent="When our system is connected, your order is also saved securely. The WhatsApp message is what we reply to.";
+}}catch(e){}}
+const $=s=>document.querySelector(s),bn=n=>"৳"+Number(n).toLocaleString("en-US");
+function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+function waLink(msg){return"https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(msg)}
+function svcMsg(s){return`Assalamu Alaikum, I am interested in your ${s.n} service.\n\nService: ${s.n}\nPrice: ${bn(s.price)}\n\nPlease confirm the service details, availability, and final price.\n\nThank you.`}
+function link(a,msg){a.href=waLink(msg);a.target="_blank";a.rel="noopener noreferrer"}
+function card(s){
+const c=el("article","card");c.append(el("span","tag",s.pl+" · "+s.cat),el("h3","",s.n),el("div","price",bn(s.price)),el("div","mut","Est. time: "+s.t),el("p","mut",s.d));
+const d=el("details"),sm=el("summary","","What’s included & limits"),u=el("ul");s.i.forEach(x=>u.append(el("li","",x)));
+u.append(el("li","","Limitation: no guaranteed recovery or restriction removal; platforms make final decisions."));d.append(sm,u);c.append(d);
+const r=el("div","row"),a=el("a","btn wa s","Order on WhatsApp");link(a,svcMsg(s));
+const b=el("button","btn s","Order via form");b.type="button";b.onclick=()=>{$("#os").value=s.id;sum();location.hash="order"};
+r.append(a,b);c.append(r);return c}
+function fill(sel,arr,first){sel.replaceChildren();arr.forEach(([v,l])=>{const o=el("option","",l);o.value=v;sel.append(o)})}
+fill($("#fp"),[["","All platforms"],...[...new Set(S.map(s=>s.pl))].map(p=>[p,p])]);
+fill($("#fc"),[["","All categories"],...[...new Set(S.map(s=>s.cat))].map(c=>[c,c])]);
+fill($("#os"),[["","Select a service…"],...S.map(s=>[s.id,s.n+" — "+bn(s.price)]),["custom","Custom Security Support (contact for pricing)"]]);
+fill($("#ok"),[["","No package"],...PK.map((p,i)=>[i,p.n+" — "+bn(p.p)])]);
+function render(){
+const q=$("#q").value.trim().toLowerCase(),p=$("#fp").value,c=$("#fc").value,r=+$("#fr").value,so=$("#fs").value;
+let a=S.filter(s=>(!q||(s.n+" "+s.pl+" "+s.cat).toLowerCase().includes(q))&&(!p||s.pl===p)&&(!c||s.cat===c)&&(!r||s.price<=r));
+if(so)a=[...a].sort((x,y)=>so==="a"?x.price-y.price:y.price-x.price);
+const l=$("#list");l.replaceChildren(...a.map(card));$("#cnt").textContent="("+a.length+")";
+if(!a.length)l.append(el("p","mut","No services match. Try clearing a filter."))}
+["q","fp","fc","fr","fs"].forEach(i=>$("#"+i).addEventListener("input",render));
+$("#pop").replaceChildren(...S.filter(s=>s.pop).map(card));
+// packages & price list
+PK.forEach((p,i)=>{const c=el("article","card"+(p.f?" feat":""));if(p.f)c.append(el("span","tag","Featured"));const pr=el("div","price",bn(p.p));pr.style.fontSize="34px";c.append(el("h3","",p.n),pr,el("div","mut","Package price · final scope confirmed on WhatsApp"));
+const u=el("ul","mut");u.style.paddingLeft="18px";p.i.forEach(x=>u.append(el("li","",x)));c.append(u);if(p.x)c.append(el("p","note",p.x));
+const a=el("a","btn wa s","Order on WhatsApp");link(a,`Assalamu Alaikum, I am interested in your ${p.n} package.\n\nPackage: ${p.n}\nPrice: ${bn(p.p)}\n\nPlease confirm the package details, availability, and final price.\n\nThank you.`);
+const b=el("button","btn s","Order via form");b.type="button";b.onclick=()=>{$("#ok").value=i;sum();location.hash="order"};const r=el("div","row");r.style.marginTop="auto";r.append(a,b);c.append(r);$("#pk").append(c)});
+PK.forEach(p=>{const tr=el("tr");tr.append(el("td","",p.n),el("td","mut",p.w),el("td","",bn(p.p)));$("#pl").append(tr)});
+// order form
+function sum(){const s=S[$("#os").value],k=PK[$("#ok").value];
+$("#sum").textContent="Order summary — Service: "+(s?s.n:($("#os").value==="custom"?"Custom Security Support":"not selected"))+" | Package: "+(k?k.n:"none")+" | Estimated price: "+(k?bn(k.p):s?bn(s.price):"to be confirmed")+" (final price confirmed on WhatsApp)"}
+["os","ok"].forEach(i=>$("#"+i).addEventListener("input",sum));sum();
+$("#of").addEventListener("submit",e=>{
+e.preventDefault();let bad=0;const err=(i,m)=>{$("#e_"+i).textContent=m;if(m)bad=1};
+const nm=$("#on").value.trim(),ph=$("#op").value.trim(),sv=$("#os").value,ds=$("#od").value.trim();
+err("on",nm.length<2?"Please enter your name.":"");
+err("op",/^\+?[0-9\s-]{8,15}$/.test(ph)?"":"Enter a valid phone number.");
+err("os",sv?"":"Please select a service.");
+err("od",ds.length<10?"Please describe your problem (at least 10 characters).":"");
+if(/otp|password|পাসওয়ার্ড/i.test(ds))err("od","Please don’t include passwords or OTPs. Describe the issue only.");
+if(bad)return;
+const s=S[sv],k=PK[$("#ok").value];
+const msg=`Assalamu Alaikum, I would like to place an order.\n\nName: ${nm}\nContact: ${ph}\nService: ${s?s.n:"Custom Security Support"}\nPackage: ${k?k.n:"None"}\nEstimated price: ${k?bn(k.p):s?bn(s.price):"To be confirmed"}\nPreferred contact: ${$("#oc").value}\nProblem: ${ds}\n\nPlease confirm availability and the final price.\n\nThank you.`;
+if(window.sb)sb.from("orders").insert({customer_name:nm,phone:ph,service_name:s?s.n:"Custom Security Support",package_name:k?k.n:null,problem:ds,contact_method:$("#oc").value,est_price:k?k.p:s?s.price:null}).then(r=>{if(!r.error)$("#done").append(" \u2713 Order also saved in our system.")});
+const d=$("#done");d.hidden=false;d.replaceChildren(el("strong","","Almost done! "),document.createTextNode("Your order is not sent until you tap the button below and send the message in WhatsApp. "+(window.sb?"":"It is not saved on any server. ")));
+const a=el("a","btn wa s","Open WhatsApp & send order");link(a,msg);d.append(a);d.scrollIntoView({behavior:"smooth",block:"center"})});
+// contact info & misc
+$("#ci").textContent="Rajshahi, Bangladesh · Hours: "+CONFIG.hours+" · Email: "+CONFIG.email;
+const fb=el("a","","Facebook Page");fb.href=CONFIG.facebook;fb.target="_blank";fb.rel="noopener noreferrer";$("#ci").append(" · ",fb);
+document.querySelectorAll("[data-wa]").forEach(a=>link(a,a.dataset.wa));
+$("#yr").textContent=new Date().getFullYear();
+// language
+const T={en:{},bn:{h1:"আপনার ডিজিটাল নিরাপত্তায় বিশ্বস্ত সহায়তা",intro:"AMANAH CYBER | আমানাহ হলো একটি ডিজিটাল নিরাপত্তা সহায়তা ব্র্যান্ড—অ্যাকাউন্ট সুরক্ষা, প্রাইভেসি সচেতনতা, নিরাপদ সেটআপ এবং অনুমোদিত অ্যাকাউন্ট রিকভারি নির্দেশনা নিয়ে কাজ করে।",b_explore:"সার্ভিস দেখুন",b_pricing:"মূল্য দেখুন",b_wa:"হোয়াটসঅ্যাপে যোগাযোগ",n_services:"সার্ভিস",n_pricing:"মূল্য",n_order:"অর্ডার",n_about:"আমাদের সম্পর্কে",n_contact:"যোগাযোগ",s_sub:"সব সার্ভিস সার্চ ও ফিল্টার করুন। মূল্য টাকায় (৳); চূড়ান্ত মূল্য হোয়াটসঅ্যাপে নিশ্চিত করা হবে।"}};
+document.querySelectorAll("[data-t]").forEach(e=>T.en[e.dataset.t]=e.textContent);
+let L="en";$("#lang").onclick=()=>{L=L==="en"?"bn":"en";document.documentElement.lang=L;document.querySelectorAll("[data-t]").forEach(e=>e.textContent=T[L][e.dataset.t]);$("#lang").textContent=L==="en"?"বাংলা":"English"};
+render();
+})();
+</script>
+</body>
+</html>

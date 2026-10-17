@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Admin | AMANAH CYBER</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#050a14;color:#e6f1ff;font:16px/1.5 system-ui,"Noto Sans Bengali",sans-serif;padding:16px}
+.w{max-width:900px;margin:auto}h1{font-size:23px}.bar,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.bar h1{margin-right:auto}
+.card{background:#0e1a30;border:1px solid #1c2e4d;border-radius:12px;padding:14px;margin:12px 0}
+.btn{border:1px solid #22d3ee;color:#22d3ee;background:transparent;padding:9px 14px;border-radius:9px;font:inherit;cursor:pointer}.p{background:#2563eb;border-color:#2563eb;color:white}
+input,textarea{width:100%;background:#0b1424;color:#e6f1ff;border:1px solid #1c2e4d;border-radius:8px;padding:10px;font:inherit}label{display:block;color:#8fa6c4;font-size:14px;margin-top:8px}
+.mut{color:#8fa6c4;font-size:14px}.note{padding:10px;background:#0b2238;border-radius:8px;overflow-wrap:anywhere}.danger{color:#fda4af}
+</style></head><body><main class="w" id="app"></main>
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const app=document.querySelector("#app");
+const el=(tag,attrs={},...children)=>{const e=document.createElement(tag);Object.entries(attrs).forEach(([k,v])=>{if(k==="text")e.textContent=v;else if(k==="on")e.addEventListener("click",v);else e.setAttribute(k,v)});children.flat().forEach(c=>e.append(c instanceof Node?c:document.createTextNode(String(c))));return e};
+if(!window.AC?.url||!window.AC?.key||!window.supabase){app.append(el("h1",{text:"AMANAH CYBER Admin"}),el("p",{class:"note",text:"প্রথমে config.js ফাইলে Supabase Project URL এবং anon/public key বসান। service_role key কখনো ব্যবহার করবেন না।"}));throw Error("Supabase config missing")}
+const sb=supabase.createClient(AC.url,AC.key);let note;
+function say(t,bad=false){note.textContent=t;note.className="note"+(bad?" danger":"")}
+function field(label,value,type="text"){let wrap=el("div"),i=el(type==="textarea"?"textarea":"input",{type:type==="number"?"number":"text"});i.value=value??"";wrap.append(el("label",{text:label}),i);return {wrap,i}}
+async function boot(){app.replaceChildren(el("h1",{text:"AMANAH CYBER | Admin"}));note=el("p",{class:"note",text:""});app.append(note);
+const {data:{session},error}=await sb.auth.getSession();if(error){say(error.message,true);return}if(!session){login();return}
+const {data:admin,error:ae}=await sb.from("admins").select("user_id").eq("user_id",session.user.id).maybeSingle();
+if(ae||!admin){say("এই অ্যাকাউন্ট অ্যাডমিন হিসেবে অনুমোদিত নয়।",true);app.append(el("button",{class:"btn",text:"Sign out",on:()=>sb.auth.signOut().then(boot)}));return}
+dashboard(session.user.email)}
+function login(){const e=field("Admin email",""),p=field("Password","","password"),b=el("button",{class:"btn p",text:"Login",on:async()=>{const {error}=await sb.auth.signInWithPassword({email:e.i.value.trim(),password:p.i.value});if(error)say("Login failed: "+error.message,true);else boot()}});app.append(el("div",{class:"card"},e.wrap,p.wrap,b,el("p",{class:"mut",text:"Supabase Authentication-এ তৈরি করা ইমেইল ও পাসওয়ার্ড ব্যবহার করুন।"})))}
+function dashboard(email){const bar=el("div",{class:"bar"},el("span",{text:"Logged in: "+email}),el("button",{class:"btn",text:"Sign out",on:()=>sb.auth.signOut().then(boot)}));const body=el("div");app.append(bar,el("div",{class:"bar"},
+el("button",{class:"btn p",text:"Packages",on:()=>packages(body)}),
+el("button",{class:"btn",text:"Orders",on:()=>orders(body)}),
+el("button",{class:"btn",text:"Site settings",on:()=>settings(body)})),body);packages(body)}
+async function packages(body){body.replaceChildren(el("h2",{text:"Package management"}));const {data,error}=await sb.from("packages").select("*").order("name");if(error){body.append(el("p",{class:"note danger",text:error.message}));return}
+data.forEach(r=>{const n=field("Package name",r.name),d=field("Description",r.description||"","textarea"),p=field("Price (BDT)",r.price,"number"),f=field("Features (one per line)",(r.features||[]).join("\n"),"textarea"),a=el("input",{type:"checkbox"});a.checked=r.is_active;
+const card=el("section",{class:"card"},n.wrap,d.wrap,p.wrap,f.wrap,el("label",{text:"Visible on website"}),a,el("div",{class:"row"},el("button",{class:"btn p",text:"Save changes",on:async()=>{const {error}=await sb.from("packages").update({name:n.i.value.trim(),description:d.i.value.trim(),price:Number(p.i.value),features:f.i.value.split("\n").map(x=>x.trim()).filter(Boolean),is_active:a.checked}).eq("id",r.id);say(error?"Save failed: "+error.message:"Package saved. Refreshing public website may take a moment.",!!error)}})));body.append(card)});
+}
+async function orders(body){body.replaceChildren(el("h2",{text:"Orders"}));const {data,error}=await sb.from("orders").select("*").order("created_at",{ascending:false}).limit(100);if(error){body.append(el("p",{class:"note danger",text:error.message}));return}if(!data.length)body.append(el("p",{class:"mut",text:"এখনো কোনো অর্ডার নেই।"}));data.forEach(r=>body.append(el("div",{class:"card"},el("b",{text:"#"+r.order_number}),el("p",{text:(r.customer_name||"Customer")+" · "+(r.customer_phone||"No phone")}),el("p",{text:(r.package_name||"Package")+" · ৳"+r.price}),el("p",{text:"Status: "+r.status}),el("p",{class:"mut",text:new Date(r.created_at).toLocaleString()}))))}
+async function settings(body){body.replaceChildren(el("h2",{text:"Site settings"}));const {data,error}=await sb.from("site_settings").select("*");if(error){body.append(el("p",{class:"note danger",text:error.message}));return}const map=Object.fromEntries(data.map(r=>[r.key,r.value]));for(const [key,label] of [["whatsapp","WhatsApp number (digits only)"],["email","Business email"],["facebook","Facebook Page URL"],["hours","Business hours"],["hero_title","Homepage heading"],["intro","Homepage introduction"]]){const x=field(label,map[key]||"", "textarea");body.append(el("section",{class:"card"},x.wrap,el("button",{class:"btn p",text:"Save",on:async()=>{let value=x.i.value.trim();if(key==="whatsapp")value=value.replace(/\D/g,"");const {error}=await sb.from("site_settings").upsert({key,value});say(error?"Save failed: "+error.message:"Saved "+key,!!error)}}))}}
+boot();
+</script></body></html>
